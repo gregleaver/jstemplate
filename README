@@ -1,0 +1,16 @@
+Some idea I had about loading XML templates with javascript.
+Goal was to make it easy to generate multiple copies of a template but still have easy way to identify elements inside them.
+
+Define templates in xml, use template:id="..." to identify elements.
+
+eg.
+
+template = jstemplate.load('test.xml');
+
+fragment = template.inflate();
+doSomething(fragment.getElementById('...'));
+something.append(fragment.toHTML());
+
+fragment2 = template.inflate();
+doSomethingElse(fragment2.getElementById('...'));
+somethingelse.append(fragment2.toHTML());

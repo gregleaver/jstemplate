@@ -1,0 +1,26 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../src/jstemplate.js"></script>
+    <script type="text/javascript">
+      var template = jstemplate.load('test.xml');
+      var count = 0;
+      $(document).ready(function(){
+        $('#button').click(function(){
+            var newfragment = template.inflate();
+            count++;
+            // Change part of template
+            $(newfragment.getElementById('count')).text(count);
+            // Append template to document
+            $('#example').append(newfragment.toHTML());
+            });
+      });
+    </script>
+  </head>
+  <body>
+    <input id="button" type="button" value="New"/>
+    <div id="example">
+
+    </div>
+  </body>
+</html>

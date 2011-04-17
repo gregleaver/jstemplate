@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<div 
+  xmlns="http://www.w3.org/1999/xhtml" 
+  xmlns:template="http://thegoog.net/things/jstemplate" 
+  >
+  This is a template!<br/>
+  Number: <span template:id='count'></span>
+</div>
